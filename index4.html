@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script type="module">
+  import { rainbowCursor } from "https://unpkg.com/cursor-effects@latest/dist/esm.js";
+
+  new rainbowCursor();
+</script>
+
+	<title>my works</title>
+	<style>
+		body{background-color: #FFFFFF;
+				  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;}
+		h1,h2, p,footer, .wrap{margin: 0px;}
+		p{border-color: black; border-style: groove;
+			border-width: medium;}
+		h2{border-style: groove;
+			padding: 5px 5px 5px 5px;
+			text-align: center}
+		h1{width: 1140px; height: 60px; color: blue; text-align: center; padding-top: 15px; background-image: url(sky.jpg); margin: auto;
+		background-size: 1140px;
+	border-color: black; border-style: ridge;
+			border-width: thick;}
+		.wrap{width: 1120px; height: 604px;
+			margin: auto; border-color: black; border-style: ridge;
+			border-width: thick; padding: 10px 10px 10px 10px;}
+		.scrnLeft{width: 312px; height: 600px; float: left; display: flex;}
+		.scrnLeft-1{width: 262px; height: 600px; border-color: black; border-style: groove;
+			text-align: center;
+			background-color: #CCCCFF;}
+		.scrnLeft-2{position: relative;
+			left: 52px;
+			border-color: blue; border-width: 2px; border-style: dotted; width: 200px; background-color: #BABABA;}
+		.scrnRight{width: 800px; height: 600px; float: right; overflow: auto;}
+		@keyframes color {
+			from {background-color: fuchsia;}
+			to{background-color: lime;}}
+		.change{animation-name: color;
+			animation-duration: 3s;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;}
+		.bttnCrd{
+			font-size: 1rem;
+			position: absolute;
+            left: 1518px; 
+            top: 174px;}
+		.bttnProfile{background-color: transparent;
+			text-shadow: 1px 1px 1px #000;
+			color: yellow;
+			font-size: 1.5rem;
+			position: relative;
+            left: 437px; 
+            top: 170px;}
+        .bttnInsta{background-color: transparent;
+        	text-shadow: 1px 1px 1px #000;
+			color: yellow;
+			font-size: 1.5rem;
+			position: relative;
+            left: 80px; 
+            top: 510px;}
+        .bttnWorks{background-color: transparent;
+        	text-shadow: 1px 1px 1px #000;
+			color: yellow;
+			font-size: 1.5rem;
+			position: relative;
+            left: 60px; 
+            top: 200px;}
+        .bttnBox{background-color: transparent;
+        	text-shadow: 1px 1px 1px #000;
+			color: yellow;
+			font-size: 1.5rem;
+			position: relative;
+            left: 175px; 
+            top: 475px;}
+        .bttnPlaylist{background-color: transparent;
+        	text-shadow: 1px 1px 1px #000;
+			color: yellow;
+			font-size: 1.5rem;
+			position: relative;
+            left: 10px; 
+            top: 425px;}
+        .bttnContact{background-color: transparent;
+        	text-shadow: 1px 1px 1px #000;
+			color: yellow;
+			font-size: 1.5rem;
+			position: relative;
+            left: 20px; 
+            top: 400px;}
+        .sticker1{position: absolute;
+            left: -10px; 
+            top: 430px;
+            width: 370px;
+            z-index: 999;}
+        .sticker1:hover{
+        	animation: vibration 0.07s infinite;}
+        .sticker2{position: absolute;
+            left: 105px; 
+            top: 0px;
+            width: 300px;
+            z-index: 999;}
+        .footfoot{text-align: center;
+        			color: blue;
+        			font-size: 0.7rem;
+        			padding-top: 42px;
+        			padding-bottom: 32px;
+        			line-height: 1.5;}
+        .abouttxt{text-align: left;
+        			color: blue;
+        			font-size: 1rem;
+              padding-left: 25px;
+        			padding-top: 0px;
+        			padding-bottom: 0px;
+        			line-height: 1.5;}
+        .abouttxt2{text-align: left;
+        			color: blue;
+        			font-size: 1.5rem;
+              padding-left: 25px;
+        			padding-top: 0px;
+        			padding-bottom: 0px;
+        			line-height: 1.5;}
+        @keyframes vibration {
+		  from {
+		    transform: rotate(1.5deg);
+		  }
+		  to {
+		    transform: rotate(-1deg);
+		  }
+		}
+		.flow-text {
+	  display: flex;
+      flex: 0 0 auto;
+      white-space: nowrap;
+      overflow: hidden;
+      transition: 0.3s;
+      font-size: 2.5rem;
+      font-weight:bold;
+      color: #9D9993;
+  }
+  .flow-text:hover {
+    color: yellow;
+  }
+  .flow-text:hover .flow-wrap {
+    animation-play-state: paused;
+    cursor: pointer;
+  }
+  .flow-wrap {
+    animation: textLoop 10s linear infinite;
+    padding-right: 1.4881vw;
+  }
+  
+  @keyframes textLoop {
+    0% {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+    }
+  }
+  .flow-containerTop{padding-top: 5px; padding-bottom: 15px;}
+   .flow-containerBttm{padding-top: 15px; padding-bottom: 15px;}
+   .mypic{width: 252px;
+   		padding-top: 4px;}
+      a:link {color : blue;
+  text-decoration: none;}
+    a:visited {color : blue;
+  text-decoration: none;}
+	</style>
+</head>
+<body>
+	<div class="flow-containerTop">
+                <div class="flow-text">
+                    <div class="flow-wrap">˚｡𖦹 ⋆°✩͙͘͡ welcome to my world ᶻ 𝗓 𐰁 .ᐟ ٠࣪⭑꩜⧣₊</div>
+                    <div class="flow-wrap">˚｡𖦹 ⋆°✩͙͘͡ welcome to my world ᶻ 𝗓 𐰁 .ᐟ ٠࣪⭑꩜⧣₊</div>
+                    <div class="flow-wrap">˚｡𖦹 ⋆°✩͙͘͡ welcome to my world ᶻ 𝗓 𐰁 .ᐟ ٠࣪⭑꩜⧣₊</div>
+                    <div class="flow-wrap">˚｡𖦹 ⋆°✩͙͘͡ welcome to my world ᶻ 𝗓 𐰁 .ᐟ ٠࣪⭑꩜⧣₊</div>
+                </div>
+            </div>
+	<div class="wrap">		
+		<div class="scrnLeft">
+			<div class="scrnLeft-1">
+				<img src="mypic.png" class="mypic">
+				<h3 class="abouttxt2 scrnLeft-2"><a href="index.html">↩ back</a></h3>
+			</div>
+		</div>
+		<p class="scrnRight">
+			
+		</p>
+	</div>
+	<footer class="footfoot">
+		SEOUL, KOREA<br>2025 © onechosecond. ALL RIGHTS RESERVED.
+	</footer>
+	<div class="flow-containerBttm">
+                <div class="flow-text">
+                    <div class="flow-wrap">˚｡𖦹 ⋆°✩͙͘͡ welcome to my world ᶻ 𝗓 𐰁 .ᐟ ٠࣪⭑꩜⧣₊</div>
+                    <div class="flow-wrap">˚｡𖦹 ⋆°✩͙͘͡ welcome to my world ᶻ 𝗓 𐰁 .ᐟ ٠࣪⭑꩜⧣₊</div>
+                    <div class="flow-wrap">˚｡𖦹 ⋆°✩͙͘͡ welcome to my world ᶻ 𝗓 𐰁 .ᐟ ٠࣪⭑꩜⧣₊</div>
+                    <div class="flow-wrap">˚｡𖦹 ⋆°✩͙͘͡ welcome to my world ᶻ 𝗓 𐰁 .ᐟ ٠࣪⭑꩜⧣₊</div>
+                </div>
+            </div>
+</body>
+</html>

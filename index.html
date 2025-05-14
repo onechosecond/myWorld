@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script type="module">
+  import { clockCursor } from "https://unpkg.com/cursor-effects@latest/dist/esm.js";
+
+  new clockCursor();
+</script>
+
+	<title>welcome to my home</title>
+	<style>
+		label .cardWrapper {
+  position: absolute;
+  left: 1515px;
+  top: 200px;
+  height: 14vmin;
+  width: calc(14vmin / 1.4);
+  background-color: blue;
+  background-image: repeating-linear-gradient(
+      120deg,
+      rgba(255, 0, 0, 0.5),
+      rgba(255, 0, 0, 0.5) 1px,
+      transparent 1px,
+      transparent 60px
+    ),
+    repeating-linear-gradient(
+      60deg,
+      rgba(255, 0, 0, 0.5),
+      rgba(255, 0, 0, 0.5) 1px,
+      transparent 1px,
+      transparent 60px
+    ),
+    linear-gradient(
+      60deg,
+      rgba(0, 0, 0, 0.1) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgba(0, 0, 0, 0.1) 75%,
+      rgba(0, 0, 0, 0.1)
+    ),
+    linear-gradient(
+      120deg,
+      rgba(0, 0, 0, 0.1) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgba(0, 0, 0, 0.1) 75%,
+      rgba(0, 0, 0, 0.1)
+    );
+  background-size: 35px 60px;
+  margin: calc(7vmin / 10);
+  border-radius: calc(14vmin / 20);
+  box-shadow: 0 calc(14vmin / 40) calc(14vmin / 10) 0 rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  float: left;
+  transition: transform 200ms linear, box-shadow 100ms linear;
+  transform: rotateY(0deg);
+}
+input:checked + label .cardWrapper {
+  transform: rotateY(180deg);
+}
+.cardRandom {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: 1;
+  cursor: pointer;
+  transition: opacity 1ms linear 100ms;
+}
+.cardWrapper:hover {
+  filter: brightness(0.98);
+}
+input:focus + label .cardWrapper {
+  box-shadow: 0 0 calc(14vmin / 100) 0 rgba(0, 0, 0, 0.5);
+}
+input:checked + label .cardRandom {
+  opacity: 0;
+}
+.cardRandom::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(https://assets.codepen.io/2722301/cards.jpg);
+  background-size: cover;
+  animation: randomCard 1000ms steps(51, end) infinite;
+  animation-play-state: paused;
+  transform: rotate(180deg);
+}
+input:checked + label .cardRandom::before {
+  animation-play-state: running;
+}
+input {
+  height: 0;
+  width: 0;
+  border: none;
+  outline: none;
+  display: none;
+}
+@keyframes randomCard {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+.linkElement {
+  position: absolute;
+  bottom: -40px;
+  font-family: sans-serif;
+  font-size: 20px;
+  color: #4069e1;
+  text-decoration: none;
+}
+.linkElement:hover {
+  filter: hue-rotate(-45deg);
+}
+		body{background-color: #BABABA;
+				  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;}
+		h1,h2, p,footer, .wrap{margin: 0px;}
+		p{border-color: black; border-style: groove;
+			border-width: medium;}
+		h2{border-style: groove;
+			padding: 5px 5px 5px 5px;
+			text-align: center}
+		h1{width: 1140px; height: 60px; color: blue; text-align: center; padding-top: 15px; background-image: url(sky.jpg); margin: auto;
+		background-size: 1140px;
+	border-color: black; border-style: ridge;
+			border-width: thick;}
+		p{background-image: url(main.png);
+			background-size: 800px;}
+    a:link {color : yellow;
+  text-decoration: none;}
+    a:visited {color : yellow;
+  text-decoration: none;}
+		.wrap{width: 1120px; height: 604px;
+			margin: auto; border-color: black; border-style: ridge;
+			border-width: thick; padding: 10px 10px 10px 10px;}
+		.scrnLeft{width: 312px; height: 600px; float: left; display: flex;}
+		.scrnLeft-1{width: 262px; height: 600px; border-color: black; border-style: groove;
+			text-align: center;
+			background-color: #CEFF0A;}
+		.scrnLeft-2{position: relative;
+			left: 52px;
+			border-color: blue; border-width: 2px; border-style: dotted; width: 200px; background-color: #BABABA;}
+		.scrnRight{width: 800px; height: 600px; float: right;}
+		@keyframes color {
+			from {background-color: fuchsia;}
+			to{background-color: lime;}}
+		.change{animation-name: color;
+			animation-duration: 3s;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;}
+		.bttnCrd{
+			font-size: 1rem;
+			position: absolute;
+            left: 1518px; 
+            top: 174px;}
+		.bttnProfile{background-color: transparent;
+			text-shadow: 1px 1px 1px #000;
+			color: yellow;
+			font-size: 1.5rem;
+			position: relative;
+            left: 437px; 
+            top: 170px;}
+        .bttnInsta{background-color: transparent;
+        	text-shadow: 1px 1px 1px #000;
+			color: yellow;
+			font-size: 1.5rem;
+			position: relative;
+            left: 80px; 
+            top: 510px;}
+        .bttnWorks{background-color: transparent;
+        	text-shadow: 1px 1px 1px #000;
+			color: yellow;
+			font-size: 1.5rem;
+			position: relative;
+            left: 60px; 
+            top: 200px;}
+        .bttnBox{background-color: transparent;
+        	text-shadow: 1px 1px 1px #000;
+			color: yellow;
+			font-size: 1.5rem;
+			position: relative;
+            left: 175px; 
+            top: 475px;}
+        .bttnPlaylist{background-color: transparent;
+        	text-shadow: 1px 1px 1px #000;
+			color: yellow;
+			font-size: 1.5rem;
+			position: relative;
+            left: 10px; 
+            top: 425px;}
+        .bttnContact{background-color: transparent;
+        	text-shadow: 1px 1px 1px #000;
+			color: yellow;
+			font-size: 1.5rem;
+			position: relative;
+            left: 20px; 
+            top: 400px;}
+        .sticker1{position: absolute;
+            left: -10px; 
+            top: 430px;
+            width: 370px;
+            z-index: 999;}
+        .sticker1:hover{
+        	animation: vibration 0.07s infinite;}
+        .sticker2{position: absolute;
+            left: 105px; 
+            top: 0px;
+            width: 300px;
+            z-index: 999;}
+        .footfoot{text-align: center;
+        			color: blue;
+        			font-size: 0.7rem;
+        			padding-top: 42px;
+        			padding-bottom: 32px;
+        			line-height: 1.5;}
+        .abouttxt{text-align: left;
+        			color: blue;
+        			font-size: 1rem;
+              padding-left: 25px;
+        			padding-top: 0px;
+        			padding-bottom: 0px;
+        			line-height: 1.5;}
+        .abouttxt2{text-align: left;
+        			color: blue;
+        			font-size: 1.5rem;
+              padding-left: 25px;
+        			padding-top: 0px;
+        			padding-bottom: 0px;
+        			line-height: 1.5;}
+        @keyframes vibration {
+		  from {
+		    transform: rotate(1.5deg);
+		  }
+		  to {
+		    transform: rotate(-1deg);
+		  }
+		}
+		.flow-text {
+	  display: flex;
+      flex: 0 0 auto;
+      white-space: nowrap;
+      overflow: hidden;
+      transition: 0.3s;
+      font-size: 2.5rem;
+      font-weight:bold;
+      color: #9D9993;
+  }
+  .flow-text:hover {
+    color: yellow;
+  }
+  .flow-text:hover .flow-wrap {
+    animation-play-state: paused;
+    cursor: pointer;
+  }
+  .flow-wrap {
+    animation: textLoop 10s linear infinite;
+    padding-right: 1.4881vw;
+  }
+  
+  @keyframes textLoop {
+    0% {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+    }
+  }
+  .flow-containerTop{padding-top: 5px; padding-bottom: 15px;}
+   .flow-containerBttm{padding-top: 15px; padding-bottom: 15px;}
+   .mypic{width: 252px;
+   		padding-top: 4px;}
+	</style>
+</head>
+<body>
+	<div class="flow-containerTop">
+                <div class="flow-text">
+                    <div class="flow-wrap">˚｡𖦹 ⋆°✩͙͘͡ welcome to my world ᶻ 𝗓 𐰁 .ᐟ ٠࣪⭑꩜⧣₊</div>
+                    <div class="flow-wrap">˚｡𖦹 ⋆°✩͙͘͡ welcome to my world ᶻ 𝗓 𐰁 .ᐟ ٠࣪⭑꩜⧣₊</div>
+                    <div class="flow-wrap">˚｡𖦹 ⋆°✩͙͘͡ welcome to my world ᶻ 𝗓 𐰁 .ᐟ ٠࣪⭑꩜⧣₊</div>
+                    <div class="flow-wrap">˚｡𖦹 ⋆°✩͙͘͡ welcome to my world ᶻ 𝗓 𐰁 .ᐟ ٠࣪⭑꩜⧣₊</div>
+                </div>
+            </div>
+	<div class="wrap">		
+		<div class="scrnLeft">
+			<div class="scrnLeft-1">
+				<img src="mypic.png" class="mypic">
+				<h3 class="abouttxt2 scrnLeft-2">潤承</h3>
+				<h3 class="abouttxt scrnLeft-2">graphic<br>illustration<br>editorial<br>identity<br>animation</h3>
+        <a href="https://www.freecounterstat.com" title="free hit counter"><img src="https://counter4.optistats.ovh/private/freecounterstat.php?c=k6xr563zas4erd6dtb1bqxlgqwbz6w72" border="0" title="free hit counter" alt="free hit counter"></a>
+			</div>
+		</div>
+		<p class="scrnRight change">
+			<button class="bttnProfile" type="button"><a href="index4.html">profile</a></button>
+			<button class="bttnInsta" type="button"><a href="https://www.instagram.com/melonw_owater" target="_blank">instagram</a></button>
+			<button class="bttnWorks" type="button"><a href="index3.html">my works</a></button>
+			<button class="bttnBox" type="button">trinket box</button>
+			<button class="bttnPlaylist" type="button">playlists</button>
+			<button class="bttnContact" type="button"><a href="index5.html">contact</a></button>
+		</p>
+	</div>
+	<footer class="footfoot">
+		SEOUL, KOREA<br>2025 © onechosecond. ALL RIGHTS RESERVED.
+	</footer>
+	<img src="kid.png" class="sticker1">
+	<input type="checkbox" id="card_01" checked>
+		<label for="card_01">
+		  <div class="cardWrapper">
+		    <div class="cardRandom"></div>
+		  </div>
+		</label>
+		<input type="checkbox" id="card_02" checked>
+		<label for="card_02" class="sticker2">
+		  <div class="cardWrapper">
+		    <div class="cardRandom"></div>
+		  </div>
+		</label>
+	<button class="bttnCrd">Who wants to play cards?</button>
+	<div class="flow-containerBttm">
+                <div class="flow-text">
+                    <div class="flow-wrap">˚｡𖦹 ⋆°✩͙͘͡ welcome to my world ᶻ 𝗓 𐰁 .ᐟ ٠࣪⭑꩜⧣₊</div>
+                    <div class="flow-wrap">˚｡𖦹 ⋆°✩͙͘͡ welcome to my world ᶻ 𝗓 𐰁 .ᐟ ٠࣪⭑꩜⧣₊</div>
+                    <div class="flow-wrap">˚｡𖦹 ⋆°✩͙͘͡ welcome to my world ᶻ 𝗓 𐰁 .ᐟ ٠࣪⭑꩜⧣₊</div>
+                    <div class="flow-wrap">˚｡𖦹 ⋆°✩͙͘͡ welcome to my world ᶻ 𝗓 𐰁 .ᐟ ٠࣪⭑꩜⧣₊</div>
+                </div>
+            </div>
+</body>
+</html>
